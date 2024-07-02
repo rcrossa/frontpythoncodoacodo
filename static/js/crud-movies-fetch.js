@@ -34,7 +34,7 @@ async function fetchData(url, method, data = null) {
  * por medio del uso de template string de JS.
  */
 async function showMovies(){
-    let movies =  await fetchData('https://jiarrese.pythonanywhere.com/api/movies/', 'GET');
+    let movies =  await fetchData(BASEURL+'api/movies/', 'GET');
     const tableMovies = document.querySelector('#list-table-movies tbody');
     tableMovies.innerHTML='';
     console.log("test ",movies);
