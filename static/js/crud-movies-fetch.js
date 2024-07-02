@@ -1,5 +1,5 @@
 // const BASEURL = 'http://127.0.0.1:5000';
-const BASEURL = 'https://jiarrese.pythonanywhere.com'
+const BASEURL = 'http://jiarrese.pythonanywhere.com'
 
 /**
  * Función para realizar una petición fetch con JSON.
@@ -34,7 +34,7 @@ async function fetchData(url, method, data = null) {
  * por medio del uso de template string de JS.
  */
 async function showMovies(){
-    let movies =  await fetchData(BASEURL+'/api/movies/', 'GET');
+    let movies =  await fetchData('https://jiarrese.pythonanywhere.com/api/movies/', 'GET');
     const tableMovies = document.querySelector('#list-table-movies tbody');
     tableMovies.innerHTML='';
     console.log("test ",movies);
